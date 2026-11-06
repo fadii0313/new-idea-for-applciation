@@ -23,3 +23,4 @@ public record StyleRecommendationResponse(
     string StrategicAdvice,
     List<StyleEnsembleResponse> Ensembles
 );
+

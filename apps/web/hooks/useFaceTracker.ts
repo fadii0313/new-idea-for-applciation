@@ -108,3 +108,4 @@ export function useFaceTracker({ videoRef, isActive }: UseFaceTrackerOptions) {
     isTracking: landmarks.isDetected,
   };
 }
+

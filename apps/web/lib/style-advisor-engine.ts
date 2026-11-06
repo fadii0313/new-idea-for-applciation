@@ -192,3 +192,4 @@ export class StyleAdvisorEngine {
     return allEnsembles.filter((e) => e.aesthetic === selectedAesthetic);
   }
 }
+

@@ -79,3 +79,4 @@ export function BiometricFaceCard({ biometrics, isTracking }: BiometricFaceCardP
     </div>
   );
 }
+

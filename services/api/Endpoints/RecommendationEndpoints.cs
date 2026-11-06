@@ -38,3 +38,4 @@ public static class RecommendationEndpoints
         return endpoints;
     }
 }
+

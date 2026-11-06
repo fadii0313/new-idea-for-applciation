@@ -7,3 +7,4 @@ public record GroomingJobResponse(
     string? Error,
     DateTime CreatedAtUtc
 );
+

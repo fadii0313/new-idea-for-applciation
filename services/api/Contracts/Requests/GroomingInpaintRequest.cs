@@ -6,3 +6,4 @@ public class GroomingInpaintRequest
     public string GroomingType { get; set; } = "facial_hair"; // facial_hair, clean_shave, stubble
     public string StyleName { get; set; } = "clean_shave";    // Chevron, Van Dyke, 3_day_stubble, clean_shave
 }
+

@@ -82,3 +82,4 @@ public class RecommendationService : IRecommendationService
         return new StyleRecommendationResponse(faceShape, targetAesthetic, advice, filtered);
     }
 }
+
