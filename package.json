@@ -1,0 +1,16 @@
+{
+  "name": "aura-vton-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --prefix apps/web run dev",
+    "build:web": "npm --prefix apps/web run build",
+    "dev:api": "dotnet run --project services/api/Aura.Api.csproj",
+    "build:api": "dotnet build services/api/Aura.Api.csproj",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down"
+  }
+}

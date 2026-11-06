@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_GATEWAY_URL=http://localhost:5000
+      - NEXT_PUBLIC_ENABLE_DRACO_COMPRESSION=true
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: ./services/api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - REPLICATE_API_TOKEN=${REPLICATE_API_TOKEN:-r8_your_actual_replicate_token_here}
+      - ConnectionStrings__Redis=redis:6379
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
