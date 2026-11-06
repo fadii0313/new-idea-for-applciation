@@ -132,3 +132,4 @@ export function FootwearScene({ landmarks, modelPath }: FootwearSceneProps) {
     </>
   );
 }
+

@@ -7,3 +7,4 @@ public record TryOnJobStatusResponse(
     string? Error,
     DateTime CreatedAtUtc
 );
+

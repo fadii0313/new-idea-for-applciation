@@ -83,3 +83,4 @@ public class CatalogService : ICatalogService
         return Items.FirstOrDefault(i => i.Sku.Equals(sku, StringComparison.OrdinalIgnoreCase));
     }
 }
+

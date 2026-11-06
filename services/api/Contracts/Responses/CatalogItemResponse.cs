@@ -9,3 +9,4 @@ public record CatalogItemResponse(
     string? Description = null,
     string? ThumbnailUrl = null
 );
+

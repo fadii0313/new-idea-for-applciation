@@ -8,3 +8,4 @@ public class GarmentTryOnRequest
     public string? GarmentDescription { get; set; }
     public int Steps { get; set; } = 30;
 }
+

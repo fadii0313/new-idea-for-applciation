@@ -176,3 +176,4 @@ export function CameraCapture({ onCapture, isProcessing }: CameraCaptureProps) {
     </div>
   );
 }
+

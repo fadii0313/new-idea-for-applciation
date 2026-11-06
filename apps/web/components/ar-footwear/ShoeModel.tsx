@@ -45,3 +45,4 @@ export function ShoeModel({ modelPath, isRightFoot = false }: ShoeModelProps) {
 
   return <group dispose={null}>{content}</group>;
 }
+

@@ -172,3 +172,4 @@ This launches:
 - `web`: Next.js 14 App Router on `http://localhost:3000`
 - `api`: ASP.NET Core 9 Minimal API Gateway on `http://localhost:5000`
 - `redis`: Redis 7 alpine on port `6379`
+

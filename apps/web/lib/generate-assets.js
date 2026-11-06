@@ -170,3 +170,4 @@ for (const d of shoeDirs) {
 }
 
 console.log('Valid GLB files generated successfully in public and models/assets directories.');
+

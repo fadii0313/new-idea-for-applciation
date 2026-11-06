@@ -53,3 +53,4 @@ export function TorsoGuideOverlay({ isAligned = false }: TorsoGuideOverlayProps)
     </div>
   );
 }
+

@@ -119,3 +119,4 @@ export class FootMathEngine {
     currentScale.lerp(targetScale, clampedAlpha);
   }
 }
+

@@ -107,3 +107,4 @@ export function useFootTracker({ videoRef, isActive, onLandmarksUpdate }: UseFoo
     isTracking: landmarks.isDetected,
   };
 }
+

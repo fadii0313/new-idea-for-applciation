@@ -17,7 +17,6 @@ builder.Services.AddCors(opt =>
             )
             .SetIsOriginAllowed(origin =>
             {
-                // Allow localhost on any port for local development
                 if (Uri.TryCreate(origin, UriKind.Absolute, out var uri))
                 {
                     return uri.Host.Equals("localhost", StringComparison.OrdinalIgnoreCase)
@@ -57,6 +56,8 @@ builder.Services.AddSingleton<IJobCache, RedisJobCache>();
 builder.Services.AddSingleton<ICatalogService, CatalogService>();
 builder.Services.AddSingleton<IStorageService, S3StorageService>();
 builder.Services.AddSingleton<IVtonInferenceService, ReplicateVtonService>();
+builder.Services.AddSingleton<IGroomingService, GroomingService>();
+builder.Services.AddSingleton<IRecommendationService, RecommendationService>();
 
 // Health Checks
 builder.Services.AddHealthChecks();
@@ -78,14 +79,22 @@ app.MapHealthChecks("/health");
 app.MapGet("/", () => Results.Ok(new
 {
     service = "AURA Virtual Try-On Studio API Gateway",
-    version = "1.0.0",
+    version = "1.2.0",
     status = "healthy",
     engine = "ASP.NET Core 9 Minimal API",
-    capabilities = new[] { "Footwear AR Metadata", "IDM-VTON Garment Diffusion Gateway" }
+    capabilities = new[]
+    {
+        "Footwear AR Metadata",
+        "IDM-VTON Garment Diffusion Gateway",
+        "Section 7: Facial Grooming & Hair Inpainting Gateway",
+        "Section 8: AI Fashion & Style Recommendation Advisory"
+    }
 }));
 
 // Map Feature Endpoints
 app.MapCatalogEndpoints();
 app.MapTryOnEndpoints();
+app.MapGroomingEndpoints();
+app.MapRecommendationEndpoints();
 
 app.Run();

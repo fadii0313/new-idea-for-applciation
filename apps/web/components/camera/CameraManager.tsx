@@ -66,3 +66,4 @@ export function CameraManager({ camera, children }: CameraManagerProps) {
     </div>
   );
 }
+

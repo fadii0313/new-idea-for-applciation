@@ -100,3 +100,4 @@ export function ProductCard({ product, onSelect, isSelected = false }: ProductCa
     </div>
   );
 }
+

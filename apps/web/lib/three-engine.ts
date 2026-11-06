@@ -81,3 +81,4 @@ export function createProceduralShoeGeometry(): THREE.Group {
 
   return shoeGroup;
 }
+

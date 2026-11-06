@@ -36,3 +36,4 @@ export function CanvasContainer({ landmarks, modelPath }: CanvasContainerProps) 
     </div>
   );
 }
+
